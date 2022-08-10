@@ -901,7 +901,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .hero {
       min-height: 100vh; } }
   .hero__title {
@@ -912,12 +912,15 @@ textarea {
     display: flex;
     justify-content: center;
     overflow: hidden; }
+    @media screen and (min-width: 768px) {
+      .hero__cover {
+        max-width: 60%; } }
     @media screen and (min-width: 1280px) {
       .hero__cover {
         max-width: 40%; } }
     .hero__cover img {
       max-width: 150%; }
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: 768px) {
         .hero__cover img {
           max-width: 100%; } }
   .hero__stack {
@@ -927,8 +930,11 @@ textarea {
       max-width: 35px; }
       .hero__stack img:not(:last-child) {
         margin-right: 10px; }
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: 768px) {
         .hero__stack img {
-          max-width: 70px; }
+          max-width: 50px; }
           .hero__stack img:not(:last-child) {
             margin-right: 30px; } }
+      @media screen and (min-width: 1280px) {
+        .hero__stack img {
+          max-width: 70px; } }
