@@ -1,0 +1,47 @@
+h1 {
+    @include typo-title(60px);
+}
+
+h2 {
+    @include typo-title(50px);
+}
+
+h3 {
+    @include typo-title(40px);
+}
+
+p,
+li,
+a {
+    @include typo(16px);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.lead {
+    @include typo(18px);
+    line-height: 1;
+}
+
+.main-title {
+    color: $cyan;
+    text-transform: uppercase;
+    font-weight: 600;
+    @include typo(35px);
+}
+
+.subtitle {
+    color: $grey;
+    text-transform: uppercase;
+    @include typo(25px);
+}
+
+.quote {
+    color: $grey;
+    @include typo(17px);
+}
+
+.secondary-title {
+}

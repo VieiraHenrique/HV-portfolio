@@ -1,0 +1,109 @@
+.navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: $blue-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include transition;
+
+    @include ipad {
+        height: 100vh;
+        max-width: 100px;
+    }
+
+    &__title {
+        color: $cyan;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 60px;
+        opacity: 0;
+        @include transition;
+        transform: translateX(-35px);
+        display: none;
+        @include ipad {
+            display: block;
+        }
+    }
+
+    &__subtitle {
+        color: $grey;
+        font-size: 22px;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        @include transition;
+        transform: translateX(-35px);
+        display: none;
+        @include ipad {
+            display: block;
+        }
+    }
+
+    &__links-list {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+        @include ipad {
+            display: flex;
+            margin-top: 40px;
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__link {
+        color: $grey;
+        display: flex;
+        align-items: center;
+
+        @include ipad {
+            padding: 15px 35px;
+        }
+
+        &:hover {
+            background-color: darken($color: $blue-dark, $amount: 3);
+            .navigation__link-text {
+                color: $cyan;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 25px;
+
+        @include ipad {
+            margin-right: 30px;
+        }
+    }
+
+    &__link-text {
+        font-size: 18px;
+        opacity: 0;
+        transform: translateX(-100px);
+        @include transition;
+        display: none;
+        @include ipad {
+            display: block;
+        }
+    }
+
+    @include ipad {
+        &:hover {
+            max-width: 220px;
+            .navigation__title,
+            .navigation__subtitle,
+            .navigation__link-text {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+}
